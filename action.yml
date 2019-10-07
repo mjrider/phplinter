@@ -21,4 +21,3 @@ runs:
     - parallel-lint
     - '${{ inputs.options }}'
     - '${{ inputs.directory }}'
-    
