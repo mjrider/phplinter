@@ -5,13 +5,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    container: 
+      image: pipelinecomponents/yamllint:latest
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
-      container: 
-        image: pipelinecomponents/yamllint:latest
       run: yamllint action.yml
   lint-php:
     runs-on: ubuntu-18.04
