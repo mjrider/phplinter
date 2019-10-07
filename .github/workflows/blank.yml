@@ -13,4 +13,12 @@ jobs:
       container: 
         image: pipelinecomponents/yamllint:latest
       run: yamllint action.yml
+  lint-php:
+    runs-on: ubuntu-18.04
+    container:
+      image: pipelinecomponents/php-linter:latest 
+    steps:
+      - uses: actions/checkout@v1
+      - name: Lint php
+        run: parallel-lint --colors .
       
