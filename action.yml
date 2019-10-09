@@ -16,7 +16,7 @@ inputs:
     default: ''
 runs:
   using: 'docker'
-  image: docker://registry.gitlab.com/pipeline-components/yamllint/amd64:08387c500f0294fd9335eac6ac48d9124e7c9c7d
+  image: docker://registry.gitlab.com/pipeline-components/php-linter/amd64:07dbec67b37994424f902b17b91193ffc9957fb8
   args:
     - parallel-lint
     - '${{ inputs.options }}'
