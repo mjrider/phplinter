@@ -23,10 +23,8 @@ jobs:
         run: touch dummy.php
       - name: Lint php
         run:  parallel-lint --colors .
-  lint-php2:
-    runs-on: docker
+  php-linter:
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: touch dummy.php
       - uses: mjrider/phplinter@master
