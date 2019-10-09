@@ -16,7 +16,7 @@ jobs:
   lint-php:
     runs-on: ubuntu-18.04
     container:
-      image: pipelinecomponents/php-linter:latest 
+      image: registry.gitlab.com/pipeline-components/yamllint/amd64:08387c500f0294fd9335eac6ac48d9124e7c9c7d
     steps:
       - uses: actions/checkout@v1
       - name: Run a one-line script
