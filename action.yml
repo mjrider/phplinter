@@ -13,7 +13,6 @@ inputs:
   options:
     description: 'Additional options'
     required: false
-    default: ''
 runs:
   using: 'docker'
   image: docker://registry.gitlab.com/pipeline-components/php-linter/amd64:07dbec67b37994424f902b17b91193ffc9957fb8
