@@ -22,6 +22,7 @@ jobs:
       - name: Run a one-line script
         run: touch dummy.php
       - name: Lint php
+        run:  parallel-lint --colors .
   lint-php2:
     runs-on: docker
     steps:
