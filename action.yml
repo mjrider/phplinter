@@ -13,10 +13,10 @@ inputs:
   options:
     description: 'Additional options'
     required: false
-    default: '--colors'
+    default: ''
 runs:
   using: 'docker'
-  image: docker://pipelinecomponents/php-linter
+  image: docker://registry.gitlab.com/pipeline-components/yamllint/amd64:08387c500f0294fd9335eac6ac48d9124e7c9c7d
   args:
     - parallel-lint
     - '${{ inputs.options }}'
