@@ -15,7 +15,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: docker://pipelinecomponents/php-linter:edge
+  image: Dockerfile
   args:
     - parallel-lint
     - ${{ inputs.options }}
