@@ -7,6 +7,10 @@ entrypoint() {
   # shellcheck disable=SC2039
   local A
 
+  # GITHUB escapaes to much, so 'unescape' it ;-(
+  if [  ${GITHUB_ACTIONS:-} == "true" ]
+    exec ${@}
+  fi
   # CI is set, just execute the arguments
   if [ -n "${CI:-}" ] ; then
     exec "${@}"
