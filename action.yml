@@ -13,11 +13,10 @@ inputs:
   options:
     description: 'Additional options'
     required: false
-    default: ~
 runs:
   using: 'docker'
   image: docker://pipelinecomponents/php-linter:edge
   args:
     - parallel-lint
-    - '${{ inputs.options }}'
-    - '${{ inputs.directory }}'
+    - ${{ inputs.options }}
+    - ${{ inputs.directory }}
