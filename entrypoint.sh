@@ -8,7 +8,7 @@ entrypoint() {
   local A
 
   # GITHUB escapaes to much, so 'unescape' it ;-(
-  if [  ${GITHUB_ACTIONS:-} == "true" ]
+  if [  ${GITHUB_ACTIONS:-} == "true" ] ; then
     exec ${@}
   fi
   # CI is set, just execute the arguments
